@@ -4,27 +4,27 @@ public class NumberGuessing {
     public static void
     guessingNumberGame(){
         Scanner sc = new Scanner(System.in);
-        int number = 1 + (int)(100 * Math.random());
+        int no = 1 + (int)(100 * Math.random());
         int K = 5;
-        int i, guess;
+        int a, guess;
         System.out.println("Choose a Number between 1 to 100. Guess the number within 5 trials.");
-        for (i = 0; i < K; i++) {
+        for (a = 0; a < K; a++) {
             System.out.print("Guess the number :");
             guess = sc.nextInt();
-            if (number == guess) {
+            if (no == guess) {
                 System.out.println( "Congratulations! You guessed the number.");
                 break;
             }
-            else if (number > guess && i != K - 1) {
+            else if (no > guess && a != K - 1) {
                 System.out.println("The number is greater than " + guess);
             }
-            else if (number < guess && i != K - 1) {
+            else if (no < guess && a != K - 1) {
                 System.out.println("The number is less than " + guess);
             }
         }
-        if (i == K) {
+        if (a == K) {
             System.out.println("You have exhausted K trials.");
-            System.out.println("The number was " + number);
+            System.out.println("The number was " + no);
         }
         sc.close();
     }
